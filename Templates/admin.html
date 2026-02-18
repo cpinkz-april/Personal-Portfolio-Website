@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin — Messages</title>
+  <style>
+    :root { --sea: #0d4f6b; --seafoam: #5bbfd4; --ink: #0a0f14; --paper: #f4f0e8; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--ink); color: var(--paper); font-family: 'DM Mono', monospace, sans-serif; padding: 3rem; }
+    h1 { font-size: 1.5rem; color: var(--seafoam); margin-bottom: 2rem; letter-spacing: .1em; }
+    .count { font-size: .75rem; opacity: .5; margin-left: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+    th { text-align: left; padding: .6rem 1rem; border-bottom: 1px solid rgba(91,191,212,.2);
+         color: var(--seafoam); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; }
+    td { padding: .75rem 1rem; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: top; }
+    tr:hover td { background: rgba(91,191,212,.04); }
+    .msg-text { max-width: 400px; white-space: pre-wrap; opacity: .8; line-height: 1.5; }
+    .timestamp { opacity: .4; font-size: .7rem; }
+    .empty { text-align: center; padding: 4rem; opacity: .4; }
+  </style>
+</head>
+<body>
+  <h1>Contact Messages <span class="count">{{ messages|length }} total</span></h1>
+
+  {% if messages %}
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>Name</th><th>Email</th><th>Subject</th><th>Message</th><th>Received</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in messages %}
+      <tr>
+        <td>{{ m['id'] }}</td>
+        <td>{{ m['name'] }}</td>
+        <td>{{ m['email'] }}</td>
+        <td>{{ m['subject'] }}</td>
+        <td class="msg-text">{{ m['message'] }}</td>
+        <td class="timestamp">{{ m['timestamp'][:16] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty">No messages yet.</p>
+  {% endif %}
+</body>
+</html>
