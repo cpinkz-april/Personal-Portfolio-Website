@@ -1,12 +1,12 @@
 # Personal Portfolio Website
 A full-stack portfolio site built with Flask (Python) on the backend and a custom ocean-themed HTML/CSS/JS frontend.
 ## Project Structure
-portfolio/
-├── app.py               ← Flask app, routes, SQLAlchemy model
-├── requirements.txt     ← Python dependencies
-├── templates/
-│   ├── index.html       ← Main portfolio page
-│   └── admin.html       ← Admin page to view contact messages
+portfolio/<br>
+├── app.py               ← Flask app, routes, SQLAlchemy model<br>
+├── requirements.txt     ← Python dependencies<br>
+├── templates/<br>
+│   ├── index.html       ← Main portfolio page<br>
+│   └── admin.html       ← Admin page to view contact messages<br>
 └── static/              ← (add images, extra CSS/JS here)
 ## Quick Start
 ### 1. Create & activate a virtual environment
