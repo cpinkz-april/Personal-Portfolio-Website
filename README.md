@@ -1,9 +1,9 @@
-# Personal-Portfolio-Website
+# Personal Portfolio Website
 ## Features
-✅ Animated ocean-themed hero with floating particles
-✅ Scroll-reveal animations
-✅ Responsive layout (mobile-friendly)
-✅ Contact form → stores messages in SQLite
-✅ Admin dashboard to view messages
-✅ Custom cursor with hover effects
+✅ Animated ocean-themed hero with floating particles<br>
+✅ Scroll-reveal animations<br>
+✅ Responsive layout (mobile-friendly)<br>
+✅ Contact form → stores messages in SQLite<br>
+✅ Admin dashboard to view messages<br>
+✅ Custom cursor with hover effects<br>
 ✅ Zero external CSS frameworks (fully custom)
